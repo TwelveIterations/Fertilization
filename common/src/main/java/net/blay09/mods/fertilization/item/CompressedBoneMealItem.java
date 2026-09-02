@@ -11,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BonemealSource;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jspecify.annotations.Nullable;
@@ -50,7 +51,7 @@ public class CompressedBoneMealItem extends Item {
             return InteractionResult.PASS;
         }
 
-        if (!((BonemealableBlock) state.getBlock()).isBonemealSuccess(level, level.getRandom(), pos, state)) {
+        if (!((BonemealableBlock) state.getBlock()).isBonemealSuccess(level, level.getRandom(), pos, state, BonemealSource.INTERACTION)) {
             return InteractionResult.SUCCESS;
         }
 
