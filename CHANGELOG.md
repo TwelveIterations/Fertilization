@@ -1,1 +1,2 @@
-- Added a visual effect to Florist's Bonemeal flower duplication to make it feel less cheaty
+- Fixed inconsistent swing behavior of compressed bone meal
+- Fixed Florist's Bonemeal particle trail not displaying correctly
